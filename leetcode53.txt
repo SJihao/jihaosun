@@ -1,0 +1,25 @@
+遍历法：超出时间限制
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        if(nums.size()<1) return NULL;
+        int maxsum=INT_MIN;
+        for(int i=0;i<nums.size();i++)
+        {     
+            int length=0;
+            while(length+i<nums.size())
+            {
+                int sum=0;
+                int j=i+length;
+                for(int k=i;k<=j;k++)
+                {
+                   sum+=nums[k];
+                }
+                maxsum=max(sum,maxsum);
+                length++;
+            }
+        }
+        return maxsum;
+       
+    }
+};
