@@ -1,0 +1,107 @@
+************************************************************************************
+ Merlin Compiler (TM) Version 2018.4.dev (cf41d0f6e.10390)
+ Built Mon Nov 12 04:16:22 2018 -0800
+ Copyright (C) 2015-2018 Falcon Computing Solutions, Inc. All Rights Reserved.
+************************************************************************************
+INFO: [MERCC-1096] Host - 'noisy' with linux x86_64-linux-thread-multi
+INFO: [MERCC-1097] User - dalinzhu
+INFO: [MERCC-1098] Time - Thu Nov 15 20:59:24 PST 2018
+INFO: [MERCC-1099] Directory - /curr/dalinzhu/code/merlin-compiler/Examples/vec_add/build
+
+INFO: [MERCC-1008] Checking Xilinx xocc ...
+INFO: [MERCC-1009] Found Xilinx xocc : /curr/software/Xilinx/SDx/2017.4/bin/xocc
+INFO: [MERCC-1005] Checking license.
+INFO: [MERCC-1007] Feature FALCON_XILINX checked out.
+INFO: [MERCC-1033] Syntax checking...
+
+Starting optimization step 0 none args="-a impl_tool=sdaccel -a skip_syntax_check=" ... 
+ 1 seconds 
+
+Starting optimization step 1 lower_separate args=" -a skip_syntax_check= -a enable_cpp=  -a impl_tool=sdaccel -a effort=standard -a generate_l2_api=on" ... 
+ 2 seconds 
+INFO: [MERCC-1034] Synthesizability checking...
+
+Starting optimization step 2 preprocess args=" -a impl_tool=sdaccel -a effort=standard -a generate_l2_api=on -a pure_kernel=" ... 
+ 1 seconds 
+
+Starting optimization step 3 kernel_wrapper args="  -a impl_tool=sdaccel -a effort=standard -a generate_l2_api=on" ... 
+ 1 seconds 
+
+Starting optimization step 4 postwrap_process args=" -a impl_tool=sdaccel -a effort=standard -a generate_l2_api=on" ... 
+ 2 seconds 
+
+Starting optimization step 5 postwrap_process args=" -a impl_tool=sdaccel -a effort=standard -a generate_l2_api=on -a global_convert=true" ... 
+ 1 seconds 
+INFO: [MERCC-1035] Interface synthesis...
+
+Starting optimization step 6 interface_transform args=" -a impl_tool=sdaccel -a effort=standard -a generate_l2_api=on" ... 
+ 2 seconds 
+
+Starting optimization step 7 midend_preprocess args="-a auto_fgpar_opt -a auto_fgpip_opt  -a impl_tool=sdaccel -a effort=standard -a generate_l2_api=on -a loop_tiling=" ... 
+ 2 seconds 
+INFO: [MERCC-1036] Kernel optimization...
+
+Starting optimization step 8 memory_burst args=" -a impl_tool=sdaccel -a effort=standard -a generate_l2_api=on" ... 
+ 1 seconds 
+INFO: [BURST-101] Memory burst inferred: variable 'c' (vec_add_kernel.cpp:9) in scope (vec_add_kernel.cpp:13)
+  burst buffer size = 40000 bytes
+INFO: [BURST-101] Memory burst inferred: variable 'a' (vec_add_kernel.cpp:9) in scope (vec_add_kernel.cpp:13)
+  burst buffer size = 40000 bytes
+INFO: [BURST-101] Memory burst inferred: variable 'b' (vec_add_kernel.cpp:9) in scope (vec_add_kernel.cpp:13)
+  burst buffer size = 40000 bytes
+
+Starting optimization step 9 delinearization args=" -a impl_tool=sdaccel -a effort=standard -a generate_l2_api=on" ... 
+ 2 seconds 
+
+Starting optimization step 10 coarse_parallel args=" -a impl_tool=sdaccel -a effort=standard -a generate_l2_api=on" ... 
+ 2 seconds 
+
+Starting optimization step 11 bitwidth_opt args=" -a impl_tool=sdaccel -a effort=standard -a generate_l2_api=on -a bus_length_threshold=" ... 
+ 2 seconds 
+INFO: [WDBUS-101] Memory coalescing inferred: variable 'a' (vec_add_kernel.cpp:9)
+  interface bitwidth = 512 bits
+INFO: [WDBUS-101] Memory coalescing inferred: variable 'b' (vec_add_kernel.cpp:9)
+  interface bitwidth = 512 bits
+INFO: [WDBUS-101] Memory coalescing inferred: variable 'c' (vec_add_kernel.cpp:9)
+  interface bitwidth = 512 bits
+
+Starting optimization step 12 reduction_general args=" -a impl_tool=sdaccel -a effort=standard -a generate_l2_api=on" ... 
+ 7 seconds 
+
+Starting optimization step 13 coarse_pipeline args=" -a impl_tool=sdaccel -a effort=standard -a generate_l2_api=on" ... 
+ 7 seconds 
+
+Starting optimization step 14 loop_parallel args="  -a impl_tool=sdaccel -a effort=standard -a generate_l2_api=on" ... 
+ 10 seconds 
+INFO: [FGPIP-103] Loop fine-grained pipelining applied: loop 'L_0'
+  (vec_add_kernel.cpp:13) 
+
+INFO: [FGPIP-102] Loop fine-grained parallelization applied: loop 'L_0_0'
+ (vec_add_kernel.cpp:13) 
+  parallel units:  16
+
+Starting optimization step 15 auto_func_inline args="-a auto_func_inline=  -a impl_tool=sdaccel -a effort=standard -a generate_l2_api=on" ... 
+ 7 seconds 
+INFO: [MERCC-1037] Code generation...
+
+Starting optimization step 16 final_code_gen args="-a impl_tool=sdaccel -a mode=opencl -a naive= -a effort=standard -a volatile_flag= -a explicit_bundle=" ... 
+ 8 seconds 
+
+INFO: [MERCC-1040] Compilation finished successfully.
+
+
+Total time: 93.03 seconds
+Peak memory usage: 112.03 Mbyte
+
+
+************************************************************************************
+ Merlin Compiler (TM) Version 2018.4.dev (cf41d0f6e.10390)
+ Built Mon Nov 12 04:16:22 2018 -0800
+ Copyright (C) 2015-2018 Falcon Computing Solutions, Inc. All Rights Reserved.
+************************************************************************************
+INFO: [MERCC-1096] Host - 'noisy' with linux x86_64-linux-thread-multi
+INFO: [MERCC-1097] User - dalinzhu
+INFO: [MERCC-1098] Time - Thu Nov 15 21:01:04 PST 2018
+INFO: [MERCC-1099] Directory - /curr/dalinzhu/code/merlin-compiler/Examples/vec_add/build
+
+ERROR: [MERCC-3006] Fail to generate estimation report.
